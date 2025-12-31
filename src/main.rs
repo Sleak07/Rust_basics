@@ -1,8 +1,10 @@
 // Creating a guessing game in rust
-
+mod variables;
 use rand::Rng;
 use std::cmp::Ordering;
 use std::io;
+
+use crate::variables::{int_types, name};
 fn main() {
     println!("Hello to Guesses");
 
@@ -29,4 +31,6 @@ fn main() {
             }
         }
     }
+    name();
+    int_types();
 }
