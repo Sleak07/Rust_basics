@@ -12,3 +12,13 @@ pub fn int_types() {
     let n2: u32 = 200; // unsigned values are always positive,0,255
     println!("Both values are {},{}", n1, n2);
 }
+
+pub fn float_types() {
+    let a: f64 = 0.5;
+    let b: f64 = 0.5;
+    let c = a + b;
+
+    println!("{}", c)
+}
+
+// Bools and chars you know
