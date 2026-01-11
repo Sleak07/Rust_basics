@@ -1,11 +1,14 @@
 // Creating a guessing game in rust
-mod variables;
 mod compound;
+mod variables;
 use rand::Rng;
 use std::cmp::Ordering;
 use std::io;
 
-use crate::{compound::tups, variables::{float_types, int_types, name}};
+use crate::{
+    compound::{array, tups},
+    variables::{float_types, int_types, name},
+};
 fn main() {
     println!("Hello to Guesses");
 
@@ -36,4 +39,5 @@ fn main() {
     int_types();
     float_types();
     tups();
+    array();
 }
