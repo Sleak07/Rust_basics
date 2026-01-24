@@ -11,3 +11,12 @@ pub fn array() {
     let numbers: [u8; 5] = [1, 2, 3, 4, 5];
     println!("{:?}", numbers[4])
 }
+
+// return parameters in functions
+pub fn celsius_to_fahrenheit(celsius: f64) -> f64 {
+    celsius * 9.0 / 5.0 + 32.0
+}
+
+////////////////////// Statements vs Expressiions in rust //////////////////////
+// Statements just execute code and dont return anything
+// Expressiions are meant to return something

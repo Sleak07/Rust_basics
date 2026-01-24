@@ -1,4 +1,5 @@
 // Creating a guessing game in rust
+
 mod compound;
 mod variables;
 use rand::Rng;
@@ -6,7 +7,7 @@ use std::cmp::Ordering;
 use std::io;
 
 use crate::{
-    compound::{array, tups},
+    compound::{array, celsius_to_fahrenheit, tups},
     variables::{float_types, int_types, name},
 };
 fn main() {
@@ -40,4 +41,7 @@ fn main() {
     float_types();
     tups();
     array();
+
+    let farenheit = celsius_to_fahrenheit(25.0);
+    println!("25°C = {}°F", farenheit);
 }
