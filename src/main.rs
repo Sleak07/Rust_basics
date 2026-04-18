@@ -1,47 +1,16 @@
-// Creating a guessing game in rust
-
-mod compound;
-mod variables;
-use rand::Rng;
-use std::cmp::Ordering;
+//TODO: Enter user inmput and count no of words
+//
 use std::io;
-
-use crate::{
-    compound::{array, celsius_to_fahrenheit, tups},
-    variables::{float_types, int_types, name},
-};
 fn main() {
-    println!("Hello to Guesses");
+    println!("Enter a sentence of your choice ? ");
 
-    let secret_number: u32 = rand::rng().random_range(1..=100);
-    println!("The secret_number is : {}", secret_number);
+    let mut input = String::new();
+    io::stdin()
+        .read_line(&mut input)
+        .expect("Fail to read line");
 
-    loop {
-        println!("Input your guess : ");
-        let mut guess: String = String::new();
+    let input = input.trim();
+    let word_count = input.split_whitespace().count();
 
-        io::stdin()
-            .read_line(&mut guess)
-            .expect("Failed to read line ");
-
-        let guess: u32 = guess.trim().parse().expect("Please type a valid integer");
-        println!("You guessed: {}", guess);
-
-        match guess.cmp(&secret_number) {
-            Ordering::Less => println!("Too smalll"),
-            Ordering::Greater => println!("Too big"),
-            Ordering::Equal => {
-                println!("You guessed Correctly");
-                break;
-            }
-        }
-    }
-    name();
-    int_types();
-    float_types();
-    tups();
-    array();
-
-    let farenheit = celsius_to_fahrenheit(25.0);
-    println!("25°C = {}°F", farenheit);
+    println!("Word count : {}", word_count);
 }
