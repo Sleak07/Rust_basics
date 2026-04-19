@@ -1,6 +1,8 @@
 //TODO: Enter user inmput and count no of words
 //
+mod dice;
 use std::io;
+
 fn main() {
     println!("Enter a sentence of your choice ? ");
 
@@ -13,4 +15,7 @@ fn main() {
     let word_count = input.split_whitespace().count();
 
     println!("Word count : {}", word_count);
+
+    let result = dice::dice_roll();
+    println!("{} is the number you rolled", result);
 }
