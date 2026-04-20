@@ -1,6 +1,7 @@
 //TODO: Enter user inmput and count no of words
 //
 mod dice;
+mod case;
 use std::io;
 
 fn main() {
